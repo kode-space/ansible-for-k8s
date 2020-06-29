@@ -10,6 +10,36 @@
 
 > Provision Kubernetes Clusters Denagn Menggunakan Ansible
 
+## Cara Penggunaan
+1. Siapkan Minimal 2 Server dengan spesifikasi masing-masing:
+```
+CPU : 2 Core
+RAM : 2 GB
+Storage : 20 GB
+OS : Ubuntu 18.04
+Network : 100 Mbps
+```
+
+2. Ubah Konfigurasi Host dengan menginputkan IP Public Server pada file hosts replace `master_ip` dengan alamat yang akan digunakan sebagai Node Master dan `worker_ip` dengan alamat yang akan digunakan sebagai Worker Node
+3. Melakukan Instalasi Kubernetes Depedencies seperti Docker, Kubeadm, Kubelet dan Kubectl
+```
+ansible-playbook -i hosts kube-tools.yaml
+```
+4. Melakukan Inisialisasi Node Master dengan menggunakan Kubeadm
+```
+ansible-playbook -i hosts master.yaml
+```
+5. Melakukan Join Clusters dari Worker Node ke Master Node. Worker digunakan untuk host pod container
+```
+ansible-playbook -i hosts worker.yaml
+```
+
+Referensi : 
+* [How To Create a Kubernetes Cluster Using Kubeadm on Ubuntu 18.04]('https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-18-04')
+
+
+
+
 ## Author
 
 👤 **Restu Muzakir**
