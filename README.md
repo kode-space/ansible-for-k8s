@@ -14,6 +14,9 @@
 * Ansible
 * Two Linux Machine (VPS, VM, Container)
 
+## Sudah dicoba
+* Menggunakan Dua Instance dengan AWS Lightsail dengan spesifikasi 2x`2Core+4GB+80GB_SSD`
+
 ## Cara Penggunaan
 1. Siapkan Minimal 2 Server dengan spesifikasi masing-masing:
 ```
