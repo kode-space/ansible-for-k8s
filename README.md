@@ -10,6 +10,10 @@
 
 > Provision Kubernetes Clusters Denagn Menggunakan Ansible
 
+## Requirements
+* Ansible
+* Two Linux Machine (VPS, VM, Container)
+
 ## Cara Penggunaan
 1. Siapkan Minimal 2 Server dengan spesifikasi masing-masing:
 ```
