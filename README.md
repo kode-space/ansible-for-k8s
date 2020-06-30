@@ -27,7 +27,7 @@ OS : Ubuntu 18.04
 Network : 100 Mbps
 ```
 
-2. Ubah Konfigurasi Host dengan menginputkan IP Public Server pada file hosts replace `master_ip` dengan alamat yang akan digunakan sebagai Node Master dan `worker_ip` dengan alamat yang akan digunakan sebagai Worker Node
+2. Ubah Konfigurasi di file `hosts` dengan menginputkan IP Public Server pada file hosts replace `master_ip` dengan alamat yang akan digunakan sebagai Node Master dan `worker_ip` dengan alamat yang akan digunakan sebagai Worker Node
 3. Melakukan Instalasi Kubernetes Depedencies seperti Docker, Kubeadm, Kubelet dan Kubectl
 ```
 ansible-playbook -i hosts kube-tools.yaml
